@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Hemoglobin Data Showcase</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Interactive Hemoglobin Data Showcase</h1>
+    <p>Built for Karina Shah for Dr. Nitin Shah.</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <label for="dataset">Dataset:</label>
+      <select id="dataset">
+        <option value="ghana" selected>Ghana (clean)</option>
+        <option value="ensenada">Ensenada, Mexico (full)</option>
+      </select>
+      <button id="reload">Load</button>
+    </section>
+
+    <section>
+      <h2 id="title">Ghana — Hemoglobin Dataset</h2>
+      <div class="grid">
+        <div class="card"><h3>Age vs Hemoglobin</h3><div id="scatter"></div></div>
+        <div class="card"><h3>Hemoglobin Distribution</h3><div id="hist"></div></div>
+        <div class="card"><h3>Hemoglobin by Sex (Box)</h3><div id="box"></div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>First 100 Rows</h2>
+      <div id="table"></div>
+    </section>
+
+    <footer><p>Built with <a href="https://plotly.com/javascript/">Plotly.js</a>.</p></footer>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
